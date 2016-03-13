@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/fragment_backgroud">
+
+    <LinearLayout
+        android:id="@+id/download_nav_layout"
+        style="@style/NavLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/download_nav_album_text"
+            style="@style/NavBarText"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/download_nav_album_text"/>
+        <TextView
+            android:id="@+id/download_nav_voice_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/NavBarText"
+            android:text="@string/download_nav_voice_text"/>
+        <TextView
+            android:id="@+id/download_nav_downloading_text"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/NavBarText"
+            android:text="@string/download_nav_downloading_text"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/download_nav_cursor"
+        style="@style/cursorImageView"
+        android:layout_height="5dp"
+        android:layout_below="@id/download_nav_layout"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/download_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/download_nav_cursor">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

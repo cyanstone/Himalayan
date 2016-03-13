@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Himalayan</string>
+    <string name="tab_text_find">发现</string>
+    <string name="tab_customization_text">定制听</string>
+    <string name="tab_download_text">下载听</string>
+    <string name="tab_me_text">我</string>
+    <string name="text_view_recommend">推荐</string>
+    <string name="text_view_classify">分类</string>
+    <string name="text_view_broad">广播</string>
+    <string name="text_view_ranking_list">榜单</string>
+    <string name="text_view_host">主播</string>
+    <string name="tab_app_name">喜马拉雅FM</string>
+    <string name="cus_bar_subscribe">订阅</string>
+    <string name="cus_bar_find">发现</string>
+    <string name="cus_bar_history">历史</string>
+    <string name="download_nav_album_text">专辑</string>
+    <string name="download_nav_voice_text">声音</string>
+    <string name="download_nav_downloading_text">下载中</string>
+</resources>

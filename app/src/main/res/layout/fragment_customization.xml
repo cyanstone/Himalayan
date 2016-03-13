@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:background="@color/fragment_backgroud">
+
+    <LinearLayout
+        android:id="@+id/customization_nav_layout"
+        android:orientation="horizontal"
+        style="@style/NavLayout"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/cus_nav_recommend"
+            style="@style/NavBarText"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/cus_bar_find"/>
+        <TextView
+           android:id="@+id/cus_nav_subscribe"
+            style="@style/NavBarText"
+           android:layout_weight="1"
+           android:layout_width="0dp"
+            android:text="@string/cus_bar_subscribe"/>
+        <TextView
+            android:id="@+id/cus_nav_history"
+            style="@style/NavBarText"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/cus_bar_history"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/custom_cursor"
+        android:layout_height="5dp"
+        android:layout_below="@id/customization_nav_layout"
+        style="@style/cursorImageView"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/cus_view_pager"
+        android:layout_below="@id/custom_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>
