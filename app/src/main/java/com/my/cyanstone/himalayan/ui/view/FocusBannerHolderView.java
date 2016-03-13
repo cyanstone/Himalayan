@@ -28,7 +28,7 @@ public class FocusBannerHolderView implements Holder<FocusImagesList>{
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HimalayanApplication.sContext,data.getShortTitle(),Toast.LENGTH_LONG).show();
+                Toast.makeText(HimalayanApplication.sContext,data.getShortTitle(),Toast.LENGTH_SHORT).show();
             }
         });
     }
