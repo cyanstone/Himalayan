@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryRecommend;
 import com.my.cyanstone.himalayan.model.FocusImages;
@@ -54,7 +55,6 @@ public class DiscoveryRecommendFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_discovery_recommend, container, false);
         mConvenientBanner = (ConvenientBanner) v.findViewById(R.id.convenientBanner);
         fetchGson(v);
-       // initBanner(v);
         return v;
     }
 

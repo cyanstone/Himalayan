@@ -15,6 +15,15 @@ public class DicoveryColumnsList {
     private boolean enableShare;
     private boolean isExternalUrl;
     private int contentUpdatedAt;
+    private DiscoveryAlbumProperties properties;
+
+    public DiscoveryAlbumProperties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(DiscoveryAlbumProperties properties) {
+        this.properties = properties;
+    }
 
     public int getId() {
         return id;

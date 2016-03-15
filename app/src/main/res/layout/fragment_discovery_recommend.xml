@@ -11,4 +11,10 @@
         app:canLoop="true">
     </com.bigkoo.convenientbanner.ConvenientBanner>
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/dicovery_view_Pager"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+    </android.support.v4.view.ViewPager>
+
 </LinearLayout>
