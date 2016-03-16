@@ -18,7 +18,7 @@ public class FocusBannerHolderView implements Holder<FocusImagesList>{
     @Override
     public View createView(Context context) {
         mImageView =  new ImageView(context);
-        mImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        mImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         return mImageView;
     }
 

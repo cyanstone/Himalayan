@@ -5,28 +5,28 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <com.my.cyanstone.himalayan.ui.view.ImageTextView
-        android:id="@+id/it1"
+        android:id="@+id/it5"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
     </com.my.cyanstone.himalayan.ui.view.ImageTextView>
 
     <com.my.cyanstone.himalayan.ui.view.ImageTextView
-        android:id="@+id/it2"
+        android:id="@+id/it6"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
     </com.my.cyanstone.himalayan.ui.view.ImageTextView>
 
     <com.my.cyanstone.himalayan.ui.view.ImageTextView
-        android:id="@+id/it3"
+        android:id="@+id/it7"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
     </com.my.cyanstone.himalayan.ui.view.ImageTextView>
 
     <com.my.cyanstone.himalayan.ui.view.ImageTextView
-        android:id="@+id/it4"
+        android:id="@+id/it8"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">

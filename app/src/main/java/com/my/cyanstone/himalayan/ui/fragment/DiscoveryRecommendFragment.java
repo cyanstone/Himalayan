@@ -3,6 +3,8 @@ package com.my.cyanstone.himalayan.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.my.cyanstone.himalayan.R;
+import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.model.DiscoveryRecommend;
 import com.my.cyanstone.himalayan.model.FocusImages;
 import com.my.cyanstone.himalayan.model.FocusImagesList;
@@ -42,6 +45,9 @@ public class DiscoveryRecommendFragment extends Fragment {
     private DiscoveryRecommend mDiscoveryRecommend;
     private ConvenientBanner mConvenientBanner;
     private List<FocusImagesList> mFocusImagesLists;
+
+    private List<Fragment> mDiscoveryColumsFragments;
+    private ViewPager mDisvoeryColumsPagers;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +92,7 @@ public class DiscoveryRecommendFragment extends Fragment {
                         @Override
                         public void run() {
                             initBanner(v);
+                            initColums(v);
                         }
 
                     });
@@ -100,10 +107,30 @@ public class DiscoveryRecommendFragment extends Fragment {
             public FocusBannerHolderView createHolder() {
                 return new FocusBannerHolderView();
             }
-        },mFocusImagesLists)
+        }, mFocusImagesLists)
                 .setPageIndicator(new int[]
-                        {R.mipmap.ic_page_indicator,R.mipmap.ic_page_indicator_focused} )
+                        {R.mipmap.ic_page_indicator, R.mipmap.ic_page_indicator_focused})
                 .startTurning(5000);
+    }
+
+    private void initColums(View v){
+        mDiscoveryColumsFragments = new ArrayList<Fragment>();
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums1Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums2Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums3Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+
+        mDisvoeryColumsPagers = (ViewPager) v.findViewById(R.id.dicovery_view_Pager);
+        mDisvoeryColumsPagers.setAdapter(new FragmentStatePagerAdapter(getActivity().getSupportFragmentManager() ) {
+            @Override
+            public Fragment getItem(int position) {
+                return mDiscoveryColumsFragments.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return mDiscoveryColumsFragments.size();
+            }
+        });
     }
 
 }

@@ -6,7 +6,7 @@ package com.my.cyanstone.himalayan.model;
 public class DiscoveryRecommend {
     private Entrances entrances;
     private int ret;
-    private DicoveryColumns discoveryColumns;
+    private DsicoveryColumns discoveryColumns;
     private EditorRecommendAlbums editorRecommendAlbums;
     private HotRecommends hotRecommends;
     private FocusImages focusImages;
@@ -30,11 +30,11 @@ public class DiscoveryRecommend {
         this.ret = ret;
     }
 
-    public DicoveryColumns getDiscoveryColumns() {
+    public DsicoveryColumns getDiscoveryColumns() {
         return discoveryColumns;
     }
 
-    public void setDiscoveryColumns(DicoveryColumns discoveryColumns) {
+    public void setDiscoveryColumns(DsicoveryColumns discoveryColumns) {
         this.discoveryColumns = discoveryColumns;
     }
 
