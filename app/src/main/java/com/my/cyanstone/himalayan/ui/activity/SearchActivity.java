@@ -6,10 +6,12 @@ import android.util.Log;
 
 import com.my.cyanstone.himalayan.R;
 
+import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
+
 /**
  * Created by 95199 on 2016/3/10.
  */
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends SwipeBackActivity {
     private final static String TAG = "SearchActivity";
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,6 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     public void finish() {
         super.finish();
-        overridePendingTransition(R.anim.out_from_right,R.anim.in_from_right);
+       // overridePendingTransition(R.anim.out_from_right,R.anim.in_from_right);
     }
 }

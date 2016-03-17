@@ -131,6 +131,7 @@ public class DiscoveryRecommendFragment extends Fragment {
                 return mDiscoveryColumsFragments.size();
             }
         });
+        mDisvoeryColumsPagers.setBackgroundResource(R.color.tab_background);
     }
 
 }

@@ -21,7 +21,8 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/dicovery_view_Pager"
                 android:layout_width="match_parent"
-                android:layout_height="85dp">
+                android:layout_height="85dp"
+                android:paddingTop="4dp">
             </android.support.v4.view.ViewPager>
         </LinearLayout>
     </ScrollView>

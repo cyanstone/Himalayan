@@ -15,10 +15,9 @@ import com.my.cyanstone.himalayan.utils.LoadImageUtil;
  */
 public class FocusBannerHolderView implements Holder<FocusImagesList>{
     private ImageView mImageView;
-    @Override
     public View createView(Context context) {
         mImageView =  new ImageView(context);
-        mImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        mImageView.setScaleType(ImageView.ScaleType.FIT_XY);
         return mImageView;
     }
 
