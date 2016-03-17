@@ -4,17 +4,25 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <com.bigkoo.convenientbanner.ConvenientBanner
-        android:id="@+id/convenientBanner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        app:canLoop="true">
-    </com.bigkoo.convenientbanner.ConvenientBanner>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/convenientBanner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:canLoop="true">
+            </com.bigkoo.convenientbanner.ConvenientBanner>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/dicovery_view_Pager"
-        android:layout_width="match_parent"
-        android:layout_height="85dp">
-    </android.support.v4.view.ViewPager>
-
+            <android.support.v4.view.ViewPager
+                android:id="@+id/dicovery_view_Pager"
+                android:layout_width="match_parent"
+                android:layout_height="85dp">
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
