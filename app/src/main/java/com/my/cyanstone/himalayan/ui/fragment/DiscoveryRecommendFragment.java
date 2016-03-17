@@ -17,8 +17,10 @@ import com.google.gson.JsonObject;
 import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.model.DiscoveryRecommend;
+import com.my.cyanstone.himalayan.model.EditorHotRecommendAlbumsList;
 import com.my.cyanstone.himalayan.model.FocusImages;
 import com.my.cyanstone.himalayan.model.FocusImagesList;
+import com.my.cyanstone.himalayan.model.HotRecommendsList;
 import com.my.cyanstone.himalayan.net.API;
 import com.my.cyanstone.himalayan.net.MyHttpClient;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
@@ -53,6 +55,7 @@ public class DiscoveryRecommendFragment extends Fragment {
     private DiscoveryRecommendView mDiscoeryRecommend1,mDiscoeryRecommend2,mDiscoeryRecommend3,mDiscoeryRecommend4,mDiscoeryRecommend5
     ,mDiscoeryRecommend6,mDiscoeryRecommend7,mDiscoeryRecommend8,mDiscoeryRecommend9,mDiscoeryRecommend10,mDiscoeryRecommend11,mDiscoeryRecommend12
     ,mDiscoeryRecommend13,mDiscoeryRecommend14;
+    private List<HotRecommendsList> hotRecommendsLists;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -155,6 +158,119 @@ public class DiscoveryRecommendFragment extends Fragment {
         mDiscoeryRecommend12 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view12);
         mDiscoeryRecommend13 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view13);
         mDiscoeryRecommend14 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view14);
+
+        hotRecommendsLists = mDiscoveryRecommend.getHotRecommends().getList();
+        mDiscoeryRecommend1.setTitleText(hotRecommendsLists.get(0).getTitle());
+        mDiscoeryRecommend1.setImageView1(getActivity(), hotRecommendsLists.get(0).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend1.setTagText1(hotRecommendsLists.get(0).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend1.setImageView2(getActivity(), hotRecommendsLists.get(0).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend1.setTagText2(hotRecommendsLists.get(0).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend1.setImageView3(getActivity(), hotRecommendsLists.get(0).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend1.setTagText3(hotRecommendsLists.get(0).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend2.setTitleText(hotRecommendsLists.get(1).getTitle());
+        mDiscoeryRecommend2.setImageView1(getActivity(), hotRecommendsLists.get(1).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend2.setTagText1(hotRecommendsLists.get(1).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend2.setImageView2(getActivity(),hotRecommendsLists.get(1).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend2.setTagText2(hotRecommendsLists.get(1).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend2.setImageView3(getActivity(),hotRecommendsLists.get(1).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend2.setTagText3(hotRecommendsLists.get(1).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend3.setTitleText(hotRecommendsLists.get(2).getTitle());
+        mDiscoeryRecommend3.setImageView1(getActivity(), hotRecommendsLists.get(2).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend3.setTagText1(hotRecommendsLists.get(2).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend3.setImageView2(getActivity(),hotRecommendsLists.get(2).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend3.setTagText2(hotRecommendsLists.get(2).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend3.setImageView3(getActivity(),hotRecommendsLists.get(2).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend3.setTagText3(hotRecommendsLists.get(2).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend4.setTitleText(hotRecommendsLists.get(3).getTitle());
+        mDiscoeryRecommend4.setImageView1(getActivity(), hotRecommendsLists.get(3).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend4.setTagText1(hotRecommendsLists.get(3).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend4.setImageView2(getActivity(),hotRecommendsLists.get(3).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend4.setTagText2(hotRecommendsLists.get(3).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend4.setImageView3(getActivity(),hotRecommendsLists.get(3).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend4.setTagText3(hotRecommendsLists.get(3).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend5.setTitleText(hotRecommendsLists.get(4).getTitle());
+        mDiscoeryRecommend5.setImageView1(getActivity(), hotRecommendsLists.get(4).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend5.setTagText1(hotRecommendsLists.get(4).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend5.setImageView2(getActivity(),hotRecommendsLists.get(4).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend5.setTagText2(hotRecommendsLists.get(4).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend5.setImageView3(getActivity(),hotRecommendsLists.get(4).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend5.setTagText3(hotRecommendsLists.get(4).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend6.setTitleText(hotRecommendsLists.get(5).getTitle());
+        mDiscoeryRecommend6.setImageView1(getActivity(), hotRecommendsLists.get(5).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend6.setTagText1(hotRecommendsLists.get(5).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend6.setImageView2(getActivity(),hotRecommendsLists.get(5).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend6.setTagText2(hotRecommendsLists.get(5).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend6.setImageView3(getActivity(),hotRecommendsLists.get(5).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend6.setTagText3(hotRecommendsLists.get(5).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend7.setTitleText(hotRecommendsLists.get(6).getTitle());
+        mDiscoeryRecommend7.setImageView1(getActivity(), hotRecommendsLists.get(6).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend7.setTagText1(hotRecommendsLists.get(6).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend7.setImageView2(getActivity(),hotRecommendsLists.get(6).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend7.setTagText2(hotRecommendsLists.get(6).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend7.setImageView3(getActivity(),hotRecommendsLists.get(6).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend7.setTagText3(hotRecommendsLists.get(6).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend8.setTitleText(hotRecommendsLists.get(7).getTitle());
+        mDiscoeryRecommend8.setImageView1(getActivity(), hotRecommendsLists.get(7).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend8.setTagText1(hotRecommendsLists.get(7).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend8.setImageView2(getActivity(),hotRecommendsLists.get(7).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend8.setTagText2(hotRecommendsLists.get(7).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend8.setImageView3(getActivity(),hotRecommendsLists.get(7).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend8.setTagText3(hotRecommendsLists.get(7).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend9.setTitleText(hotRecommendsLists.get(8).getTitle());
+        mDiscoeryRecommend9.setImageView1(getActivity(), hotRecommendsLists.get(8).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend9.setTagText1(hotRecommendsLists.get(8).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend9.setImageView2(getActivity(),hotRecommendsLists.get(8).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend9.setTagText2(hotRecommendsLists.get(8).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend9.setImageView3(getActivity(),hotRecommendsLists.get(8).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend9.setTagText3(hotRecommendsLists.get(8).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend10.setTitleText(hotRecommendsLists.get(9).getTitle());
+        mDiscoeryRecommend10.setImageView1(getActivity(), hotRecommendsLists.get(9).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend10.setTagText1(hotRecommendsLists.get(9).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend10.setImageView2(getActivity(),hotRecommendsLists.get(9).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend10.setTagText2(hotRecommendsLists.get(9).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend10.setImageView3(getActivity(),hotRecommendsLists.get(9).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend10.setTagText3(hotRecommendsLists.get(9).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend11.setTitleText(hotRecommendsLists.get(10).getTitle());
+        mDiscoeryRecommend11.setImageView1(getActivity(), hotRecommendsLists.get(10).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend11.setTagText1(hotRecommendsLists.get(10).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend11.setImageView2(getActivity(),hotRecommendsLists.get(10).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend11.setTagText2(hotRecommendsLists.get(10).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend11.setImageView3(getActivity(),hotRecommendsLists.get(10).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend11.setTagText3(hotRecommendsLists.get(10).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend12.setTitleText(hotRecommendsLists.get(11).getTitle());
+        mDiscoeryRecommend12.setImageView1(getActivity(), hotRecommendsLists.get(11).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend12.setTagText1(hotRecommendsLists.get(11).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend12.setImageView2(getActivity(),hotRecommendsLists.get(11).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend12.setTagText2(hotRecommendsLists.get(11).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend12.setImageView3(getActivity(),hotRecommendsLists.get(11).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend12.setTagText3(hotRecommendsLists.get(11).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend13.setTitleText(hotRecommendsLists.get(12).getTitle());
+        mDiscoeryRecommend13.setImageView1(getActivity(), hotRecommendsLists.get(12).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend13.setTagText1(hotRecommendsLists.get(12).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend13.setImageView2(getActivity(),hotRecommendsLists.get(12).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend13.setTagText2(hotRecommendsLists.get(12).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend13.setImageView3(getActivity(),hotRecommendsLists.get(12).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend13.setTagText3(hotRecommendsLists.get(12).getList().get(2).getTrackTitle());
+
+        mDiscoeryRecommend14.setTitleText(hotRecommendsLists.get(13).getTitle());
+        mDiscoeryRecommend14.setImageView1(getActivity(), hotRecommendsLists.get(13).getList().get(0).getCoverLarge());
+        mDiscoeryRecommend14.setTagText1(hotRecommendsLists.get(13).getList().get(0).getTrackTitle());
+        mDiscoeryRecommend14.setImageView2(getActivity(),hotRecommendsLists.get(13).getList().get(1).getCoverLarge());
+        mDiscoeryRecommend14.setTagText2(hotRecommendsLists.get(13).getList().get(1).getTrackTitle());
+        mDiscoeryRecommend14.setImageView3(getActivity(),hotRecommendsLists.get(13).getList().get(2).getCoverLarge());
+        mDiscoeryRecommend14.setTagText3(hotRecommendsLists.get(13).getList().get(2).getTrackTitle());
     }
 
 }
