@@ -21,6 +21,7 @@ import com.my.cyanstone.himalayan.model.FocusImages;
 import com.my.cyanstone.himalayan.model.FocusImagesList;
 import com.my.cyanstone.himalayan.net.API;
 import com.my.cyanstone.himalayan.net.MyHttpClient;
+import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
 import com.my.cyanstone.himalayan.ui.view.FocusBannerHolderView;
 
 import java.io.IOException;
@@ -48,6 +49,10 @@ public class DiscoveryRecommendFragment extends Fragment {
 
     private List<Fragment> mDiscoveryColumsFragments;
     private ViewPager mDisvoeryColumsPagers;
+
+    private DiscoveryRecommendView mDiscoeryRecommend1,mDiscoeryRecommend2,mDiscoeryRecommend3,mDiscoeryRecommend4,mDiscoeryRecommend5
+    ,mDiscoeryRecommend6,mDiscoeryRecommend7,mDiscoeryRecommend8,mDiscoeryRecommend9,mDiscoeryRecommend10,mDiscoeryRecommend11,mDiscoeryRecommend12
+    ,mDiscoeryRecommend13,mDiscoeryRecommend14;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +98,7 @@ public class DiscoveryRecommendFragment extends Fragment {
                         public void run() {
                             initBanner(v);
                             initColums(v);
+                            initHotRecommends(v);
                         }
 
                     });
@@ -132,6 +138,23 @@ public class DiscoveryRecommendFragment extends Fragment {
             }
         });
         mDisvoeryColumsPagers.setBackgroundResource(R.color.tab_background);
+    }
+
+    private void initHotRecommends(View v) {
+        mDiscoeryRecommend1 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view1);
+        mDiscoeryRecommend2 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view2);
+        mDiscoeryRecommend3 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view3);
+        mDiscoeryRecommend4 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view4);
+        mDiscoeryRecommend5 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view5);
+        mDiscoeryRecommend6 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view6);
+        mDiscoeryRecommend7 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view7);
+        mDiscoeryRecommend8 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view8);
+        mDiscoeryRecommend9 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view9);
+        mDiscoeryRecommend10 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view10);
+        mDiscoeryRecommend11 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view11);
+        mDiscoeryRecommend12 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view12);
+        mDiscoeryRecommend13 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view13);
+        mDiscoeryRecommend14 = (DiscoveryRecommendView) v.findViewById(R.id.discovery_recommend_view14);
     }
 
 }

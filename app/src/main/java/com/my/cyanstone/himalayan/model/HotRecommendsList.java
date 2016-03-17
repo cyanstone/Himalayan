@@ -13,7 +13,7 @@ public class HotRecommendsList {
     private int categoryId;
     private int count;
     private boolean hasMore;
-    private List<HotRecommendsListList> list = new ArrayList<HotRecommendsListList>();
+    private List<EditorHotRecommendAlbumsList> list = new ArrayList<EditorHotRecommendAlbumsList>();
 
     public String getTitle() {
         return title;
@@ -63,11 +63,11 @@ public class HotRecommendsList {
         this.hasMore = hasMore;
     }
 
-    public List<HotRecommendsListList> getList() {
+    public List<EditorHotRecommendAlbumsList> getList() {
         return list;
     }
 
-    public void setList(List<HotRecommendsListList> list) {
+    public void setList(List<EditorHotRecommendAlbumsList> list) {
         this.list = list;
     }
 }

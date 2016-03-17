@@ -18,7 +18,7 @@ public class SearchActivity extends SwipeBackActivity {
         Log.d(TAG, "step in onCreater()");
         super.onCreate(savedInstanceState);
         Log.d(TAG, "super.onCreate() end");
-        setContentView(R.layout.fragment_discovery_classify);
+        setContentView(R.layout.activity_search);
         Log.d(TAG, "setContentView() end");
     }
 

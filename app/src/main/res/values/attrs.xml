@@ -6,4 +6,17 @@
         <attr name="text" format="string"/>
         <attr name="imageSrc" format="reference"/>
     </declare-styleable>
+    
+    <declare-styleable name="DiscoveryRecommendView">
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleText" format="string"/>
+        <attr name="imageSrc1" format="reference"/>
+        <attr name="imageSrc2" format="reference"/>
+        <attr name="imageSrc3" format="reference"/>
+        <attr name="tagText1" format="string"/>
+        <attr name="tagText2" format="string"/>
+        <attr name="tagText3" format="string"/>
+        <attr name="view_background" format="color"/>
+        <attr name="tagTextSize" format="dimension"/>
+    </declare-styleable>
 </resources>

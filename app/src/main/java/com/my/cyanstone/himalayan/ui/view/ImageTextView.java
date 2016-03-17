@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.my.cyanstone.himalayan.R;
-import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.utils.LoadImageUtil;
 
 import static com.my.cyanstone.himalayan.R.drawable.bg_zone_img_big;
@@ -84,7 +83,11 @@ public class ImageTextView extends LinearLayout {
     }
 
     public void setTextColor(int color){
-        setTextColor(color);
+        mTextView.setTextColor(color);
+    }
+
+    public void setImageView(int recourceId) {
+        mImageView.setImageResource(recourceId);
     }
 
 }

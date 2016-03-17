@@ -10,7 +10,7 @@ public class EditorRecommendAlbums {
     private int ret;
     private String title;
     private boolean hasMore;
-    private List<EditorRecommendAlbumsList> list = new ArrayList<EditorRecommendAlbumsList>();
+    private List<EditorHotRecommendAlbumsList> list = new ArrayList<EditorHotRecommendAlbumsList>();
 
     public int getRet() {
         return ret;
@@ -36,11 +36,11 @@ public class EditorRecommendAlbums {
         this.hasMore = hasMore;
     }
 
-    public List<EditorRecommendAlbumsList> getList() {
+    public List<EditorHotRecommendAlbumsList> getList() {
         return list;
     }
 
-    public void setList(List<EditorRecommendAlbumsList> list) {
+    public void setList(List<EditorHotRecommendAlbumsList> list) {
         this.list = list;
     }
 }
