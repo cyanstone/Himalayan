@@ -11,6 +11,7 @@ import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
 import com.my.cyanstone.himalayan.ui.view.ImageTextView;
+import com.my.cyanstone.himalayan.utils.ClickEvent;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 public class DiscoveryDiscoveryColums2Fragment extends Fragment {
 
     private ImageTextView it5,it6,it7,it8;
-    private ImageTextClickListener mImageTextClick;
     private ArrayList<DiscoveryColumnsList> mLists;
 
     public static Fragment newInstance(ArrayList<DiscoveryColumnsList> list){
@@ -45,12 +45,7 @@ public class DiscoveryDiscoveryColums2Fragment extends Fragment {
     }
 
     private void init(View v) {
-        mImageTextClick = new ImageTextClickListener() {
-            @Override
-            public void myOnClick() {
 
-            }
-        };
         it5 = (ImageTextView) v.findViewById(R.id.it5);
         it6 = (ImageTextView) v.findViewById(R.id.it6);
         it7 = (ImageTextView) v.findViewById(R.id.it7);
@@ -58,18 +53,38 @@ public class DiscoveryDiscoveryColums2Fragment extends Fragment {
 
         it5.setText(mLists.get(4).getTitle());
         it5.setImageView(getActivity(), mLists.get(4).getCoverPath());
-        it5.setOnImageTextClickListener(mImageTextClick,mLists.get(4));
+        it5.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(4));
+            }
+        });
 
         it6.setText(mLists.get(5).getTitle());
         it6.setImageView(getActivity(), mLists.get(5).getCoverPath());
-        it6.setOnImageTextClickListener(mImageTextClick,mLists.get(5));
+        it6.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(5));
+            }
+        });
 
         it7.setText(mLists.get(6).getTitle());
         it7.setImageView(getActivity(), mLists.get(6).getCoverPath());
-        it7.setOnImageTextClickListener(mImageTextClick,mLists.get(6));
+        it7.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(6));
+            }
+        });
 
         it8.setText(mLists.get(7).getTitle());
         it8.setImageView(getActivity(),mLists.get(7).getCoverPath());
-        it8.setOnImageTextClickListener(mImageTextClick,mLists.get(7));
+        it8.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(7));
+            }
+        });
     }
 }

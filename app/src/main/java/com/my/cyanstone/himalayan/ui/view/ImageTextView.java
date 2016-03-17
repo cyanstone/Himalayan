@@ -29,8 +29,6 @@ public class ImageTextView extends LinearLayout {
     private String mText;
     private int mImageRecourceId;
 
-    private DiscoveryColumnsList itemData;
-
     private ImageTextClickListener mClickListener;
 
     public ImageTextView(Context context) {
@@ -41,7 +39,7 @@ public class ImageTextView extends LinearLayout {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.view_text_image, this);
         TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.ImageTextView);
-        mTextSize = ta.getDimension(R.styleable.ImageTextView_textSize, 10);
+        mTextSize = ta.getDimension(R.styleable.ImageTextView_textSize, 12);
         mTextColor = ta.getColor(R.styleable.ImageTextView_textColor, Color.BLACK);
         mText = ta.getString(R.styleable.ImageTextView_text);
         mImageRecourceId = ta.getResourceId(R.styleable.ImageTextView_imageSrc, bg_zone_img_big);
@@ -68,9 +66,8 @@ public class ImageTextView extends LinearLayout {
     private void init() {
     }
 
-    public void  setOnImageTextClickListener(ImageTextClickListener listener,DiscoveryColumnsList item) {
+    public void  setOnImageTextClickListener(ImageTextClickListener listener) {
         mClickListener = listener;
-        itemData = item;
     }
 
 
@@ -89,7 +86,6 @@ public class ImageTextView extends LinearLayout {
     public void setTextColor(int color){
         setTextColor(color);
     }
-
 
 }
 

@@ -11,6 +11,7 @@ import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
 import com.my.cyanstone.himalayan.ui.view.ImageTextView;
+import com.my.cyanstone.himalayan.utils.ClickEvent;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -61,19 +62,39 @@ public class DiscoveryDiscoveryColums1Fragment extends Fragment {
 
        it1.setText(mLists.get(0).getTitle());
        it1.setImageView(getActivity(), mLists.get(0).getCoverPath());
-       it1.setOnImageTextClickListener(mClickListener,mLists.get(0));
+       it1.setOnImageTextClickListener(new ImageTextClickListener() {
+           @Override
+           public void myOnClick() {
+               ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(0));
+           }
+       });
 
        it2.setText(mLists.get(1).getTitle());
        it2.setImageView(getActivity(), mLists.get(1).getCoverPath());
-       it2.setOnImageTextClickListener(mClickListener,mLists.get(1));
+       it2.setOnImageTextClickListener(new ImageTextClickListener() {
+           @Override
+           public void myOnClick() {
+               ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(1));
+           }
+       });
 
        it3.setText(mLists.get(2).getTitle());
        it3.setImageView(getActivity(), mLists.get(2).getCoverPath());
-       it3.setOnImageTextClickListener(mClickListener,mLists.get(2));
+       it3.setOnImageTextClickListener(new ImageTextClickListener() {
+           @Override
+           public void myOnClick() {
+               ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(2));
+           }
+       });
 
        it4.setText(mLists.get(3).getTitle());
        it4.setImageView(getActivity(),mLists.get(3).getCoverPath());
-       it4.setOnImageTextClickListener(mClickListener,mLists.get(3));
+       it4.setOnImageTextClickListener(new ImageTextClickListener() {
+           @Override
+           public void myOnClick() {
+               ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(3));
+           }
+       });
 
 
     }

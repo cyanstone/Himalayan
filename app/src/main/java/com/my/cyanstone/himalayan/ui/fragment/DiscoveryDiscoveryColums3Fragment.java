@@ -11,6 +11,7 @@ import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryColumnsList;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
 import com.my.cyanstone.himalayan.ui.view.ImageTextView;
+import com.my.cyanstone.himalayan.utils.ClickEvent;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 public class DiscoveryDiscoveryColums3Fragment extends Fragment {
 
     private ImageTextView it9,it10;
-    private ImageTextClickListener mClickListener;
     private ArrayList<DiscoveryColumnsList> mLists;
 
     public static Fragment newInstance(ArrayList<DiscoveryColumnsList> list){
@@ -45,21 +45,25 @@ public class DiscoveryDiscoveryColums3Fragment extends Fragment {
     }
 
     private void init(View v) {
-        mClickListener = new ImageTextClickListener() {
-            @Override
-            public void myOnClick() {
-
-            }
-        };
         it9 = (ImageTextView) v.findViewById(R.id.it9);
         it10 = (ImageTextView) v.findViewById(R.id.it10);
 
         it9.setText(mLists.get(8).getTitle());
         it9.setImageView(getActivity(), mLists.get(8).getCoverPath());
-        it9.setOnImageTextClickListener(mClickListener,mLists.get(8));
+        it9.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(8));
+            }
+        });
 
         it10.setText(mLists.get(9).getTitle());
         it10.setImageView(getActivity(),mLists.get(9).getCoverPath());
-        it10.setOnImageTextClickListener(mClickListener,mLists.get(9));
+        it10.setOnImageTextClickListener(new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+                ClickEvent.DicoveryColumsClick(getActivity(), mLists.get(9));
+            }
+        });
     }
 }
