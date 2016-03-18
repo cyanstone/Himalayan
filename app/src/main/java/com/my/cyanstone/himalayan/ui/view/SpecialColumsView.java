@@ -46,6 +46,111 @@ public class SpecialColumsView extends LinearLayout {
         mTitleView.setText(mTitleText);
     }
 
+    public void setTitleText(String title) {
+        mTitleView.setText(title);
+    }
+
+    public void setTitleColor(int colorId) {
+        mTitleView.setTextColor(colorId);
+    }
+
+    public void setTitleSize(float size) {
+        mTitleView.setTextSize(size);
+    }
+
+    public void setLineGone1(boolean lineGone) {
+        mItemView1.setLineGone(lineGone);
+    }
+
+    public void setItemTitleText1(String title) {
+        mItemView1.setTitleText(title);
+    }
+
+    public void setmItemTitleColor1(int colorId) {
+        mItemView1.setTitleTextColorId(colorId);
+    }
+
+    public void setItemTitleSize1(float size) {
+        mItemView1.setTitleTextSize(size);
+    }
+
+    public void setItemSubtitleText1(String subtitle) {
+        mItemView1.setSubtitleText(subtitle);
+    }
+
+    public void setItemSubtitleTextSize1(float size) {
+        mItemView1.setSubtitleTextSize(size);
+    }
+
+    public void setItemSubtitleTextColor1(int color) {
+        mItemView1.setSubtitleTextColorId(color);
+    }
+
+    public void setItemFootnoteText1(String text) {
+        mItemView1.setFootnoteText(text);
+    }
+
+    public void setItemFootnoteTextColor1(int color) {
+        mItemView1.setSubtitleTextColorId(color);
+    }
+
+    public void setItemFootnoteTextSize1(float note) {
+        mItemView1.setFootnoteTextSize(note);
+    }
+
+    /**
+     *  public void setLineGone(boolean lineGone) {
+     mLine.setVisibility(lineGone ? View.GONE : View.VISIBLE);
+     }
+
+     public void setTitleText(String titleText) {
+     mTitleView.setText(titleText);
+     }
+
+     public void setSubtitleText(String subtitleText) {
+     mSubtitleView.setText(subtitleText);
+     }
+
+     public void setFootnoteText(String footnoteText) {
+     mFootnoteView.setText(footnoteText);
+     }
+
+     public void setImageSrcId(int imageSrcId) {
+     mImageView.setImageResource(imageSrcId);
+     }
+
+     public void setTitleTextColorId(int titleTextColorId) {
+     mTitleView.setTextColor(titleTextColorId);
+     }
+
+     public void setSubtitleTextColorId(int subtitleTextColorId) {
+     mSubtitleView.setTextColor(subtitleTextColorId);
+     }
+
+     public void setFootnoteTextColorId(int footnoteTextColorId) {
+     mFootnoteView.setTextColor(footnoteTextColorId);
+     }
+
+     public void setTitleTextSize(float titleTextSize) {
+     mTitleView.setTextSize(titleTextSize);
+     }
+
+     public void setSubtitleTextSize(float subtitleTextSize) {
+     mSubtitleView.setTextSize(subtitleTextSize);
+     }
+
+     public void setFootnoteTextSize(float footnoteTextSize) {
+     mFootnoteView.setTextSize(footnoteTextSize);
+     }
+
+     public void setOnClickItemClick(AlbumInfoListItemClickListener l) {
+     mListener = l;
+     }
+     * @param context
+     * @param attrs
+     * @param defStyleAttr
+     */
+
     public SpecialColumsView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
