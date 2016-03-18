@@ -120,6 +120,7 @@ public class DiscoveryFragment extends Fragment {
     }
     private void  initViewPager(View v) {
         mViewPager = (ViewPager)v.findViewById(R.id.view_pager);
+        mViewPager.setOffscreenPageLimit(4);
         mViewPager.setAdapter(new MyViewPagerAdapter(getActivity().getSupportFragmentManager()));
         mViewPager.setCurrentItem(0);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

@@ -26,11 +26,17 @@
             </android.support.v4.view.ViewPager>
 
             <com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView
+                android:id="@+id/discovery_editor_recommends"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/discovery_recommend_height"
+                android:layout_marginTop="@dimen/recommend_view_margin_top">
+            </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
+
+            <com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView
                 android:id="@+id/discovery_recommend_view1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/discovery_recommend_height"
-                android:layout_marginTop="@dimen/recommend_view_margin_top"
-                >
+                android:layout_marginTop="@dimen/recommend_view_margin_top">
             </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
 
             <com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView
@@ -121,7 +127,8 @@
                 android:id="@+id/discovery_recommend_view14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/discovery_recommend_height"
-                android:layout_marginTop="@dimen/recommend_view_margin_top">
+                android:layout_marginTop="@dimen/recommend_view_margin_top"
+                android:layout_marginBottom="64dp">
             </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
 
         </LinearLayout>

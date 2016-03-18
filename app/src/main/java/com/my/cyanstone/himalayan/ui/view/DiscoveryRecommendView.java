@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,7 +23,8 @@ public class DiscoveryRecommendView extends LinearLayout {
     private TextView mTitleView,mMoreView;
     private ImageTextView mImageTextView1,mImageTextView2,mImageTextView3;
 
-    private ImageTextClickListener mClickListener1,mClickListener2,mClickListener3;
+    private MoreClickListener mMoreClickListener;
+
 
     public DiscoveryRecommendView(Context context) {
         super(context);
@@ -61,7 +63,12 @@ public class DiscoveryRecommendView extends LinearLayout {
         mTitleView.setText(mTitleText);
         mTitleView.setTextSize(mTitleSize);
         mMoreView.setTextSize(mTitleSize);
-        mMoreView.setOnClickListener(null);
+        mMoreView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mMoreClickListener.moreClick();
+            }
+        });
 
         mImageTextView1.setText(mTagText1);
         mImageTextView1.setImageView(mImageSrcId1);
@@ -121,14 +128,22 @@ public class DiscoveryRecommendView extends LinearLayout {
     }
 
     public void setOnListener1(ImageTextClickListener l) {
-        mClickListener1 = l;
+        mImageTextView1.setOnImageTextClickListener(l);
     }
 
     public void setOnListener2(ImageTextClickListener l) {
-        mClickListener2 = l;
+        mImageTextView2.setOnImageTextClickListener(l);
     }
 
     public void setOnListener3(ImageTextClickListener l) {
-        mClickListener3 = l;
+        mImageTextView3.setOnImageTextClickListener(l);
+    }
+
+    public void setOnMoreClickListener(MoreClickListener l) {
+        mMoreClickListener = l;
+    }
+
+    public interface MoreClickListener{
+        public void moreClick();
     }
 }
