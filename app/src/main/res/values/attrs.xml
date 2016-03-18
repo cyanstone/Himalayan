@@ -19,4 +19,18 @@
         <attr name="view_background" format="color"/>
         <attr name="tagTextSize" format="dimension"/>
     </declare-styleable>
+    
+    <declare-styleable name="AlbumInfoListItemView">
+        <attr name="albumImageSrc" format="reference"/>
+        <attr name="albumTitleText" format="string"/>
+        <attr name="subtitleText" format="string"/>
+        <attr name="footnoteText" format="string"/>
+        <attr name="albumTitleTextSize" format="dimension"/>
+        <attr name="albumSubtileTextSize" format="dimension"/>
+        <attr name="footnoteTextSize" format="dimension"/>
+        <attr name="albumTitleTextColor" format="color"/>
+        <attr name="albumSubtitleTextColor" format="color"/>
+        <attr name="footnoteTextColor" format="color"/>
+        <attr name="divideLineGone" format="boolean"/>
+    </declare-styleable>
 </resources>

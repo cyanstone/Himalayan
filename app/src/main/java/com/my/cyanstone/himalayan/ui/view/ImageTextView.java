@@ -36,13 +36,13 @@ public class ImageTextView extends LinearLayout {
 
     public ImageTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.view_text_image, this);
         TypedArray ta = context.obtainStyledAttributes(attrs,R.styleable.ImageTextView);
         mTextSize = ta.getDimension(R.styleable.ImageTextView_textSize, 12);
         mTextColor = ta.getColor(R.styleable.ImageTextView_textColor, Color.BLACK);
         mText = ta.getString(R.styleable.ImageTextView_text);
         mImageRecourceId = ta.getResourceId(R.styleable.ImageTextView_imageSrc, bg_zone_img_big);
         ta.recycle();
+        LayoutInflater.from(context).inflate(R.layout.view_text_image, this);
         mImageView = (ImageView) findViewById(R.id.view_image);
         mTextView = (TextView) findViewById(R.id.view_text);
         mTextView.setTextColor(mTextColor);
