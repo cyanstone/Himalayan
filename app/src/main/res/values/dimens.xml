@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="discovery_recommend_height">180dp</dimen>
     <dimen name="recommend_view_margin_top">8dp</dimen>
+    <dimen name="special_colums_item_margin_bottom">2dp</dimen>
 </resources>

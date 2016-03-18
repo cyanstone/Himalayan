@@ -17,4 +17,5 @@
     <string name="download_nav_voice_text">声音</string>
     <string name="download_nav_downloading_text">下载中</string>
     <string name="text_more">更多</string>
+    <string name="specialColumn">精品听单</string>
 </resources>

@@ -10,12 +10,13 @@
         android:layout_weight="1">
         <TextView
             android:id="@+id/view_discovery_hot_recommend_title"
+            android:layout_marginLeft="8dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:paddingLeft="4dp"
             android:drawableLeft="@mipmap/finding_title_tag"
-            android:drawablePadding="2dp"
+            android:drawablePadding="4dp"
             android:gravity="center"
             android:textColor="@color/text_checked"
             android:text="Title"/>
@@ -24,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:paddingRight="4dp"
+            android:paddingRight="8dp"
             android:drawableRight="@drawable/discovery_hot_recommend_drawable"
             android:drawablePadding="2dp"
             android:gravity="center"
@@ -36,7 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3.5"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp">
         <com.my.cyanstone.himalayan.ui.view.ImageTextView
             android:id="@+id/view_discovery_hot_recommend_it1"
             android:layout_width="0dp"

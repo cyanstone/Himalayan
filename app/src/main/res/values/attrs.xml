@@ -33,4 +33,10 @@
         <attr name="footnoteTextColor" format="color"/>
         <attr name="divideLineGone" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="SpecialColumsView">
+        <attr name="specialColumsTitleText" format="string"/>
+        <attr name="specialColumsTitleColor" format="color"/>
+        <attr name="specialColumsTitleSize" format="dimension"/>
+    </declare-styleable>
 </resources>
