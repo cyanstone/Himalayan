@@ -13,11 +13,15 @@ import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
 public class AlbumDetailPageActivity extends SwipeBackActivity {
     private static final String TAG = "AlbumDetailPageActivity";
     private EditorHotRecommendAlbumsList mAlbumData;
+    private int positon,albumId,source,pageSize;
+    private String device,title;
+    private boolean isAsc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_detail_page);
         mAlbumData = getIntent().getExtras().getParcelable("data");
+        //position=1&albumId=322522&source=1&isAsc=true&device=android&title=听新闻&pageSize=20
     }
 
     @Override
