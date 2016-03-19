@@ -1,5 +1,6 @@
 package com.my.cyanstone.himalayan.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,7 @@ import com.my.cyanstone.himalayan.model.HotRecommendsList;
 import com.my.cyanstone.himalayan.model.SpecialColumn;
 import com.my.cyanstone.himalayan.net.API;
 import com.my.cyanstone.himalayan.net.MyHttpClient;
+import com.my.cyanstone.himalayan.ui.activity.AlbumDetailPageActivity;
 import com.my.cyanstone.himalayan.ui.view.AlbumInfoListItemView;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
@@ -197,7 +199,12 @@ public class DiscoveryRecommendFragment extends Fragment {
         mEditorRecommend.setOnListener1(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(),list.get(0));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data",list.get(0));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
 
@@ -206,7 +213,13 @@ public class DiscoveryRecommendFragment extends Fragment {
         mEditorRecommend.setOnListener2(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(),list.get(1));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                startActivity(intent);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data",list.get(1));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
 
@@ -215,7 +228,12 @@ public class DiscoveryRecommendFragment extends Fragment {
         mEditorRecommend.setOnListener3(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(),list.get(2));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data", list.get(2));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
 
@@ -234,7 +252,12 @@ public class DiscoveryRecommendFragment extends Fragment {
         view.setOnListener1(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(), item.getList().get(0));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data", item.getList().get(0));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
 
@@ -243,7 +266,12 @@ public class DiscoveryRecommendFragment extends Fragment {
         view.setOnListener2(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(), item.getList().get(1));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data",item.getList().get(1));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
         view.setImageView3(getActivity(), item.getList().get(2).getCoverLarge());
@@ -251,7 +279,12 @@ public class DiscoveryRecommendFragment extends Fragment {
         view.setOnListener3(new ImageTextClickListener() {
             @Override
             public void myOnClick() {
-                ClickEvent.DiscoveryHotRecommendsClick(getActivity(), item.getList().get(2));
+                Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
+                startActivity(intent);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("data",item.getList().get(2));
+                intent.putExtras(bundle);
+                getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });
 

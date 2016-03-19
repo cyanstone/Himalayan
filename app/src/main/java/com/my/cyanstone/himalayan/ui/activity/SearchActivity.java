@@ -25,6 +25,6 @@ public class SearchActivity extends SwipeBackActivity {
     @Override
     public void finish() {
         super.finish();
-       // overridePendingTransition(R.anim.out_from_right,R.anim.in_from_right);
+       overridePendingTransition(0,R.anim.out_from_right);
     }
 }

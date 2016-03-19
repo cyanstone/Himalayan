@@ -1,9 +1,12 @@
 package com.my.cyanstone.himalayan.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by 95199 on 2016/3/11.
  */
-public class EditorHotRecommendAlbumsList {
+public class EditorHotRecommendAlbumsList implements Parcelable{
     private long albumId;
     private String coverLarge;
     private String title;
@@ -14,6 +17,31 @@ public class EditorHotRecommendAlbumsList {
     private int serialState;
     private long trackId;
     private String trackTitle;
+
+    protected EditorHotRecommendAlbumsList(Parcel in) {
+        albumId = in.readLong();
+        coverLarge = in.readString();
+        title = in.readString();
+        tags = in.readString();
+        tracks = in.readInt();
+        playsCounts = in.readLong();
+        isFinished = in.readInt();
+        serialState = in.readInt();
+        trackId = in.readLong();
+        trackTitle = in.readString();
+    }
+
+    public static final Creator<EditorHotRecommendAlbumsList> CREATOR = new Creator<EditorHotRecommendAlbumsList>() {
+        @Override
+        public EditorHotRecommendAlbumsList createFromParcel(Parcel in) {
+            return new EditorHotRecommendAlbumsList(in);
+        }
+
+        @Override
+        public EditorHotRecommendAlbumsList[] newArray(int size) {
+            return new EditorHotRecommendAlbumsList[size];
+        }
+    };
 
     public long getAlbumId() {
         return albumId;
@@ -93,5 +121,24 @@ public class EditorHotRecommendAlbumsList {
 
     public void setTrackTitle(String trackTitle) {
         this.trackTitle = trackTitle;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeLong(albumId);
+        dest.writeString(coverLarge);
+        dest.writeString(title);
+        dest.writeString(tags);
+        dest.writeInt(tracks);
+        dest.writeLong(playsCounts);
+        dest.writeInt(isFinished);
+        dest.writeInt(serialState);
+        dest.writeLong(trackId);
+        dest.writeString(trackTitle);
     }
 }

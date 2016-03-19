@@ -25,6 +25,9 @@
         <activity android:name=".ui.activity.SearchActivity"
                   android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AlbumDetailPageActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+                  android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
