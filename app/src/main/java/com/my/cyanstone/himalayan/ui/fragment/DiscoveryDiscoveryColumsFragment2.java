@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * Created by 95199 on 2016/3/16.
  */
-public class DiscoveryDiscoveryColums2Fragment extends Fragment {
+public class DiscoveryDiscoveryColumsFragment2 extends Fragment {
 
     private ImageTextView it5,it6,it7,it8;
     private ArrayList<DiscoveryColumnsList> mLists;
@@ -26,7 +26,7 @@ public class DiscoveryDiscoveryColums2Fragment extends Fragment {
     public static Fragment newInstance(ArrayList<DiscoveryColumnsList> list){
         Bundle bundle = new Bundle();
         bundle.putSerializable("list", list);
-        Fragment fragment = new DiscoveryDiscoveryColums2Fragment();
+        Fragment fragment = new DiscoveryDiscoveryColumsFragment2();
         fragment.setArguments(bundle);
         return fragment;
     }

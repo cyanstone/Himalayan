@@ -3,6 +3,7 @@
               android:id="@+id/view_album_info_item_layout"
               android:orientation="horizontal"
               android:layout_width="match_parent"
+              android:background="@drawable/special_colums_background"
               android:layout_height="match_parent">
     <ImageView
         android:id="@+id/view_album_info_item_image"

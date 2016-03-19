@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * Created by 95199 on 2016/3/16.
  */
-public class DiscoveryDiscoveryColums1Fragment extends Fragment {
+public class DiscoveryDiscoveryColumsFragment1 extends Fragment {
 
     private ImageTextView it1,it2,it3,it4;
     private ImageTextClickListener mClickListener;
@@ -29,7 +29,7 @@ public class DiscoveryDiscoveryColums1Fragment extends Fragment {
     public static Fragment newInstance(List<DiscoveryColumnsList> list){
         Bundle bundle = new Bundle();
         bundle.putSerializable("list", (Serializable) list);
-        Fragment fragment = new DiscoveryDiscoveryColums1Fragment();
+        Fragment fragment = new DiscoveryDiscoveryColumsFragment1();
         fragment.setArguments(bundle);
         return fragment;
     }

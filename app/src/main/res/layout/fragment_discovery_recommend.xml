@@ -33,6 +33,7 @@
             </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
 
             <com.my.cyanstone.himalayan.ui.view.SpecialColumsView
+                android:id="@+id/discovery_special_colums"
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/recommend_view_margin_top"
                 android:layout_height="190dp">

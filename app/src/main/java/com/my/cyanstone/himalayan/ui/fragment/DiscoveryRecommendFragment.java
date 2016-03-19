@@ -23,6 +23,7 @@ import com.my.cyanstone.himalayan.net.MyHttpClient;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
 import com.my.cyanstone.himalayan.ui.view.FocusBannerHolderView;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
+import com.my.cyanstone.himalayan.ui.view.SpecialColumsView;
 import com.my.cyanstone.himalayan.utils.ClickEvent;
 
 import java.io.IOException;
@@ -55,6 +56,8 @@ public class DiscoveryRecommendFragment extends Fragment {
     private List<HotRecommendsList> hotRecommendsLists;
 
     private DiscoveryRecommendView mEditorRecommend;
+
+    private SpecialColumsView mSpecialColumsView;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,8 +103,10 @@ public class DiscoveryRecommendFragment extends Fragment {
                         public void run() {
                             initBanner(v);
                             initColums(v);
-                            initHotRecommends(v);
                             initEditorRecommend(v);
+                            initSpecialColums(v);
+                            initHotRecommends(v);
+
                         }
 
                     });
@@ -124,9 +129,9 @@ public class DiscoveryRecommendFragment extends Fragment {
 
     private void initColums(View v){
         mDiscoveryColumsFragments = new ArrayList<Fragment>();
-        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums1Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
-        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums2Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
-        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColums3Fragment.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColumsFragment1.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColumsFragment2.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
+        mDiscoveryColumsFragments.add(DiscoveryDiscoveryColumsFragment3.newInstance(mDiscoveryRecommend.getDiscoveryColumns().getList()));
 
         mDiscoveryColumsPagers = (ViewPager) v.findViewById(R.id.dicovery_view_Pager);
         mDiscoveryColumsPagers.setOffscreenPageLimit(2);
@@ -247,10 +252,13 @@ public class DiscoveryRecommendFragment extends Fragment {
         view.setOnMoreClickListener(new DiscoveryRecommendView.MoreClickListener() {
             @Override
             public void moreClick() {
-                ClickEvent.DiscoveryHotRecommendsMoreClick(getActivity(),item);
+                ClickEvent.DiscoveryHotRecommendsMoreClick(getActivity(), item);
             }
         });
+    }
 
+    private void initSpecialColums(View v) {
+        mSpecialColumsView = (SpecialColumsView) v.findViewById(R.id.discovery_special_colums);
     }
 
 }
