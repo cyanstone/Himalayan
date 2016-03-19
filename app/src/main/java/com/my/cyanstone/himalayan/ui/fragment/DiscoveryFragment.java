@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class DiscoveryFragment extends Fragment {
     private final static String TAG = "DiscoveryFragment";
-    private ViewPager mViewPager;
+    private static ViewPager mViewPager;
     private TextView mTextViewRecommend, mTextViewClassify,
             mTextViewBroad,mTextViewRankList,mTextViewHost;
     private ImageView mCursorImageView,mSearchImageView;
@@ -190,5 +190,9 @@ public class DiscoveryFragment extends Fragment {
         public int getCount() {
             return mFragments.size();
         }
+    }
+
+    public static void setDiscoveryCurrentPage(int index) {
+        mViewPager.setCurrentItem(index);
     }
 }

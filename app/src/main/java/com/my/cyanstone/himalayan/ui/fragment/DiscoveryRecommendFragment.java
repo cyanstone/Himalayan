@@ -304,7 +304,7 @@ public class DiscoveryRecommendFragment extends Fragment {
         mMoreCategoryButton.setOnButtonClickListener(new DiscoveryBottomButtonView.DiscoveryBottomButtonClickListener() {
             @Override
             public void onDiscoveryBottomButtonClick() {
-
+                DiscoveryFragment.setDiscoveryCurrentPage(1);
             }
         });
         mLiveButton.setText(data.get(0).getTitle());
@@ -312,7 +312,7 @@ public class DiscoveryRecommendFragment extends Fragment {
         mLiveButton.setOnButtonClickListener(new DiscoveryBottomButtonView.DiscoveryBottomButtonClickListener() {
             @Override
             public void onDiscoveryBottomButtonClick() {
-
+                DiscoveryFragment.setDiscoveryCurrentPage(2);
             }
         });
     }
