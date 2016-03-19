@@ -18,8 +18,10 @@ import com.my.cyanstone.himalayan.model.DiscoveryRecommend;
 import com.my.cyanstone.himalayan.model.EditorHotRecommendAlbumsList;
 import com.my.cyanstone.himalayan.model.FocusImagesList;
 import com.my.cyanstone.himalayan.model.HotRecommendsList;
+import com.my.cyanstone.himalayan.model.SpecialColumn;
 import com.my.cyanstone.himalayan.net.API;
 import com.my.cyanstone.himalayan.net.MyHttpClient;
+import com.my.cyanstone.himalayan.ui.view.AlbumInfoListItemView;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
 import com.my.cyanstone.himalayan.ui.view.FocusBannerHolderView;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
@@ -258,7 +260,37 @@ public class DiscoveryRecommendFragment extends Fragment {
     }
 
     private void initSpecialColums(View v) {
+        final SpecialColumn data = mDiscoveryRecommend.getSpecialColumn();
         mSpecialColumsView = (SpecialColumsView) v.findViewById(R.id.discovery_special_colums);
+        mSpecialColumsView.setTitleText(data.getTitle());
+        mSpecialColumsView.setOnMoreClickListener(new SpecialColumsView.SpecialColumsMoreClickListener() {
+            @Override
+            public void onMoreClick() {
+                ClickEvent.DiscoverySpecialColumsMoreClick(getActivity(),data);
+            }
+        });
+
+        mSpecialColumsView.setItemTitleText1(data.getList().get(0).getTitle());
+        mSpecialColumsView.setItemSubtitleText1(data.getList().get(0).getSubtitle());
+        mSpecialColumsView.setItemFootnoteText1(data.getList().get(0).getFootnote());
+        mSpecialColumsView.setItemImage1(getActivity(), data.getList().get(0).getCoverPath());
+        mSpecialColumsView.setOnItemViewClickListener1(new AlbumInfoListItemView.AlbumInfoListItemClickListener() {
+            @Override
+            public void onItemClick() {
+                    ClickEvent.DiscoverySpecialColumsItemClick(getActivity(),data.getList().get(0));
+            }
+        });
+
+        mSpecialColumsView.setItemTitleText2(data.getList().get(1).getTitle());
+        mSpecialColumsView.setItemSubtitleText2(data.getList().get(1).getSubtitle());
+        mSpecialColumsView.setItemFootnoteText2(data.getList().get(1).getFootnote());
+        mSpecialColumsView.setItemImage2(getActivity(), data.getList().get(1).getCoverPath());
+        mSpecialColumsView.setOnItemViewClickListener2(new AlbumInfoListItemView.AlbumInfoListItemClickListener() {
+            @Override
+            public void onItemClick() {
+                ClickEvent.DiscoverySpecialColumsItemClick(getActivity(),data.getList().get(1));
+            }
+        });
     }
 
 }

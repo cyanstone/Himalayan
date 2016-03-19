@@ -33,10 +33,9 @@ public class SpecialColumsView extends LinearLayout {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SpecialColumsView);
         mTitleSize = ta.getDimension(R.styleable.SpecialColumsView_specialColumsTitleSize,12);
-        mTitleColor = ta.getResourceId(R.styleable.SpecialColumsView_specialColumsTitleColor, R.color.nav_text_Checked);
         mTitleText = ta.getString(R.styleable.SpecialColumsView_specialColumsTitleText);
-
-        LayoutInflater.from(context).inflate(R.layout.view_special_column,this);
+        ta.recycle();
+        LayoutInflater.from(context).inflate(R.layout.view_special_column, this);
         mTitleView = (TextView) findViewById(R.id.view_special_column_title);
         mMoreView = (TextView) findViewById(R.id.view_special_column_more);
         mItemView1 = (AlbumInfoListItemView) findViewById(R.id.view_special_column_item1);
@@ -45,7 +44,6 @@ public class SpecialColumsView extends LinearLayout {
         mTitleView.setTextSize(mTitleSize);
         mMoreView.setTextSize(mTitleSize);
 
-        mTitleView.setTextColor(mTitleColor);
         mTitleView.setText(mTitleText);
 
         mMoreView.setOnClickListener(new OnClickListener() {
@@ -130,7 +128,7 @@ public class SpecialColumsView extends LinearLayout {
         mItemView2.setLineGone(lineGone);
     }
 
-    public void setItemTitleTex21(String title) {
+    public void setItemTitleText2(String title) {
         mItemView2.setTitleText(title);
     }
 

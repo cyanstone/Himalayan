@@ -2,6 +2,7 @@ package com.my.cyanstone.himalayan.ui.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,7 @@ public class AlbumInfoListItemView extends LinearLayout {
         mSubtitleText = da.getString(R.styleable.AlbumInfoListItemView_subtitleText);
         mFootnoteText = da.getString(R.styleable.AlbumInfoListItemView_footnoteText);
         mImageSrcId = da.getResourceId(R.styleable.AlbumInfoListItemView_albumImageSrc, R.drawable.bg_zone_img_big);
-        mTitleTextColorId = da.getResourceId(R.styleable.AlbumInfoListItemView_albumTitleTextColor,R.color.tag_text);
+        mTitleTextColorId = da.getResourceId(R.styleable.AlbumInfoListItemView_albumTitleTextColor,R.color.black_text);
         mSubtitleTextColorId = da.getResourceId(R.styleable.AlbumInfoListItemView_albumSubtitleTextColor,R.color.subtitle_text);
         mFootnoteTextColorId = da.getResourceId(R.styleable.AlbumInfoListItemView_footnoteTextColor,R.color.subtitle_text);
         mTitleTextSize = da.getDimension(R.styleable.AlbumInfoListItemView_albumTitleTextSize, 16);
@@ -71,7 +72,7 @@ public class AlbumInfoListItemView extends LinearLayout {
         mImageView.setImageResource(mImageSrcId);
 
         mTitleView.setText(mTitleText);
-        mTitleView.setTextColor(mTitleTextColorId);
+        mTitleView.setTextColor(Color.BLACK);
         mTitleView.setTextSize(mTitleTextSize);
 
         mSubtitleView.setText(mSubtitleText);

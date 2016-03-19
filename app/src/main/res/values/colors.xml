@@ -11,5 +11,6 @@
     <color name="nav_text_unChecked">#728491</color>
     <color name="nav_text_Checked">#FC5832</color>
     <color name="tag_text">#151414</color>
-    <color name="subtitle_text">#728491</color>
+    <color name="subtitle_text">#525d64</color>
+    <color name="black_text">#000000</color>
 </resources>
