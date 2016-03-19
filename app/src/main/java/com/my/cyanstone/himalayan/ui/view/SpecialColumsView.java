@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,6 +23,8 @@ public class SpecialColumsView extends LinearLayout {
     private TextView mTitleView,mMoreView;
     private AlbumInfoListItemView mItemView1,mItemView2;
 
+    private SpecialColumsMoreClickListener moreClickListener;
+
     public SpecialColumsView(Context context) {
         super(context);
     }
@@ -29,7 +32,7 @@ public class SpecialColumsView extends LinearLayout {
     public SpecialColumsView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SpecialColumsView);
-        mTitleSize = ta.getDimension(R.styleable.SpecialColumsView_specialColumsTitleSize,16);
+        mTitleSize = ta.getDimension(R.styleable.SpecialColumsView_specialColumsTitleSize,12);
         mTitleColor = ta.getResourceId(R.styleable.SpecialColumsView_specialColumsTitleColor, R.color.nav_text_Checked);
         mTitleText = ta.getString(R.styleable.SpecialColumsView_specialColumsTitleText);
 
@@ -44,6 +47,13 @@ public class SpecialColumsView extends LinearLayout {
 
         mTitleView.setTextColor(mTitleColor);
         mTitleView.setText(mTitleText);
+
+        mMoreView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moreClickListener.onMoreClick();
+            }
+        });
     }
 
     public void setTitleText(String title) {
@@ -56,8 +66,16 @@ public class SpecialColumsView extends LinearLayout {
 
     public void setTitleSize(float size) {
         mTitleView.setTextSize(size);
+        mMoreView.setTextSize(size);
     }
 
+    public void setOnMoreClickListener(SpecialColumsMoreClickListener l) {
+        moreClickListener = l;
+    }
+
+    /**
+     *Item1
+     */
     public void setLineGone1(boolean lineGone) {
         mItemView1.setLineGone(lineGone);
     }
@@ -97,61 +115,69 @@ public class SpecialColumsView extends LinearLayout {
     public void setItemFootnoteTextSize1(float note) {
         mItemView1.setFootnoteTextSize(note);
     }
+    public void setItemImage1(Context context,String url) {
+        mItemView1.setLoadImage(context, url);
+    }
+
+    public void setOnItemViewClickListener1(AlbumInfoListItemView.AlbumInfoListItemClickListener l) {
+        mItemView1.setOnItemClick(l);
+    }
 
     /**
-     *  public void setLineGone(boolean lineGone) {
-     mLine.setVisibility(lineGone ? View.GONE : View.VISIBLE);
-     }
-
-     public void setTitleText(String titleText) {
-     mTitleView.setText(titleText);
-     }
-
-     public void setSubtitleText(String subtitleText) {
-     mSubtitleView.setText(subtitleText);
-     }
-
-     public void setFootnoteText(String footnoteText) {
-     mFootnoteView.setText(footnoteText);
-     }
-
-     public void setImageSrcId(int imageSrcId) {
-     mImageView.setImageResource(imageSrcId);
-     }
-
-     public void setTitleTextColorId(int titleTextColorId) {
-     mTitleView.setTextColor(titleTextColorId);
-     }
-
-     public void setSubtitleTextColorId(int subtitleTextColorId) {
-     mSubtitleView.setTextColor(subtitleTextColorId);
-     }
-
-     public void setFootnoteTextColorId(int footnoteTextColorId) {
-     mFootnoteView.setTextColor(footnoteTextColorId);
-     }
-
-     public void setTitleTextSize(float titleTextSize) {
-     mTitleView.setTextSize(titleTextSize);
-     }
-
-     public void setSubtitleTextSize(float subtitleTextSize) {
-     mSubtitleView.setTextSize(subtitleTextSize);
-     }
-
-     public void setFootnoteTextSize(float footnoteTextSize) {
-     mFootnoteView.setTextSize(footnoteTextSize);
-     }
-
-     public void setOnClickItemClick(AlbumInfoListItemClickListener l) {
-     mListener = l;
-     }
-     * @param context
-     * @param attrs
-     * @param defStyleAttr
+     * Item2
      */
+    public void setLineGone2(boolean lineGone) {
+        mItemView2.setLineGone(lineGone);
+    }
+
+    public void setItemTitleTex21(String title) {
+        mItemView2.setTitleText(title);
+    }
+
+    public void setmItemTitleColor2(int colorId) {
+        mItemView2.setTitleTextColorId(colorId);
+    }
+
+    public void setItemTitleSize2(float size) {
+        mItemView2.setTitleTextSize(size);
+    }
+
+    public void setItemSubtitleText2(String subtitle) {
+        mItemView2.setSubtitleText(subtitle);
+    }
+
+    public void setItemSubtitleTextSize2(float size) {
+        mItemView2.setSubtitleTextSize(size);
+    }
+
+    public void setItemSubtitleTextColor2(int color) {
+        mItemView2.setSubtitleTextColorId(color);
+    }
+
+    public void setItemFootnoteText2(String text) {
+        mItemView2.setFootnoteText(text);
+    }
+
+    public void setItemFootnoteTextColor2(int color) {
+        mItemView2.setSubtitleTextColorId(color);
+    }
+
+    public void setItemFootnoteTextSize2(float note) {
+        mItemView2.setFootnoteTextSize(note);
+    }
+    public void setItemImage2(Context context,String url) {
+        mItemView2.setLoadImage(context, url);
+    }
+
+    public void setOnItemViewClickListener2(AlbumInfoListItemView.AlbumInfoListItemClickListener l) {
+        mItemView2.setOnItemClick(l);
+    }
 
     public SpecialColumsView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+    }
+
+    public interface SpecialColumsMoreClickListener{
+        public void onMoreClick();
     }
 }

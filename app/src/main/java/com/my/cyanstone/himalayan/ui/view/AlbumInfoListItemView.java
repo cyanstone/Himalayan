@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.my.cyanstone.himalayan.R;
+import com.my.cyanstone.himalayan.utils.LoadImageUtil;
 
 /**
  * Created by 95199 on 2016/3/18.
@@ -92,7 +93,7 @@ public class AlbumInfoListItemView extends LinearLayout {
     }
 
     /**
-     * 设置一系列Get方法
+     * 设置一系列Set方法
      */
 
     public void setLineGone(boolean lineGone) {
@@ -139,7 +140,10 @@ public class AlbumInfoListItemView extends LinearLayout {
         mFootnoteView.setTextSize(footnoteTextSize);
     }
 
-    public void setOnClickItemClick(AlbumInfoListItemClickListener l) {
+    public void setLoadImage(Context context,String url) {
+        LoadImageUtil.load(context,url,mImageView);
+    }
+    public void setOnItemClick(AlbumInfoListItemClickListener l) {
         mListener = l;
     }
 

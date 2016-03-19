@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:src="@drawable/bg_zone_img_big"
-        android:layout_marginRight="@dimen/special_colums_item_margin_bottom"
+        android:layout_marginRight="1dp"
+        android:padding="1dp"
         android:layout_weight="3"/>
     <LinearLayout
         android:layout_width="0dp"
@@ -58,7 +59,7 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="20dp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:src="@mipmap/ic_more"/>
@@ -68,8 +69,7 @@
             android:id="@+id/view_album_info_item_line"
             android:layout_width="match_parent"
             android:background="@color/divide_line"
-            android:layout_height="2dp"
-            android:layout_marginBottom="2dp"/>
+            android:layout_height="1dp" />
 
 
     </LinearLayout>

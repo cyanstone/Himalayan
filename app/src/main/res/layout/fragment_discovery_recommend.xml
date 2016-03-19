@@ -32,6 +32,12 @@
                 android:layout_marginTop="@dimen/recommend_view_margin_top">
             </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
 
+            <com.my.cyanstone.himalayan.ui.view.SpecialColumsView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/recommend_view_margin_top"
+                android:layout_height="190dp">
+            </com.my.cyanstone.himalayan.ui.view.SpecialColumsView>
+
             <com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView
                 android:id="@+id/discovery_recommend_view1"
                 android:layout_width="match_parent"
