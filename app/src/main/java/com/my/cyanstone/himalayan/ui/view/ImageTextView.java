@@ -50,6 +50,12 @@ public class ImageTextView extends LinearLayout {
         mTextView.setText(mText);
         mImageView.setImageResource(mImageRecourceId);
 
+        mClickListener = new ImageTextClickListener() {
+            @Override
+            public void myOnClick() {
+
+            }
+        };
         mImageView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

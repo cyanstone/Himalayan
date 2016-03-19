@@ -16,12 +16,14 @@ import com.google.gson.Gson;
 import com.my.cyanstone.himalayan.R;
 import com.my.cyanstone.himalayan.model.DiscoveryRecommend;
 import com.my.cyanstone.himalayan.model.EditorHotRecommendAlbumsList;
+import com.my.cyanstone.himalayan.model.EntrancesList;
 import com.my.cyanstone.himalayan.model.FocusImagesList;
 import com.my.cyanstone.himalayan.model.HotRecommendsList;
 import com.my.cyanstone.himalayan.model.SpecialColumn;
 import com.my.cyanstone.himalayan.net.API;
 import com.my.cyanstone.himalayan.net.MyHttpClient;
 import com.my.cyanstone.himalayan.ui.view.AlbumInfoListItemView;
+import com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView;
 import com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView;
 import com.my.cyanstone.himalayan.ui.view.FocusBannerHolderView;
 import com.my.cyanstone.himalayan.ui.view.ImageTextClickListener;
@@ -60,6 +62,8 @@ public class DiscoveryRecommendFragment extends Fragment {
     private DiscoveryRecommendView mEditorRecommend;
 
     private SpecialColumsView mSpecialColumsView;
+
+    private DiscoveryBottomButtonView mMoreCategoryButton, mLiveButton;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +112,7 @@ public class DiscoveryRecommendFragment extends Fragment {
                             initEditorRecommend(v);
                             initSpecialColums(v);
                             initHotRecommends(v);
-
+                            initBottomButton(v);
                         }
 
                     });
@@ -266,7 +270,7 @@ public class DiscoveryRecommendFragment extends Fragment {
         mSpecialColumsView.setOnMoreClickListener(new SpecialColumsView.SpecialColumsMoreClickListener() {
             @Override
             public void onMoreClick() {
-                ClickEvent.DiscoverySpecialColumsMoreClick(getActivity(),data);
+                ClickEvent.DiscoverySpecialColumsMoreClick(getActivity(), data);
             }
         });
 
@@ -277,7 +281,7 @@ public class DiscoveryRecommendFragment extends Fragment {
         mSpecialColumsView.setOnItemViewClickListener1(new AlbumInfoListItemView.AlbumInfoListItemClickListener() {
             @Override
             public void onItemClick() {
-                    ClickEvent.DiscoverySpecialColumsItemClick(getActivity(),data.getList().get(0));
+                ClickEvent.DiscoverySpecialColumsItemClick(getActivity(), data.getList().get(0));
             }
         });
 
@@ -288,7 +292,27 @@ public class DiscoveryRecommendFragment extends Fragment {
         mSpecialColumsView.setOnItemViewClickListener2(new AlbumInfoListItemView.AlbumInfoListItemClickListener() {
             @Override
             public void onItemClick() {
-                ClickEvent.DiscoverySpecialColumsItemClick(getActivity(),data.getList().get(1));
+                ClickEvent.DiscoverySpecialColumsItemClick(getActivity(), data.getList().get(1));
+            }
+        });
+    }
+
+    private void initBottomButton(View v) {
+        ArrayList<EntrancesList> data = (ArrayList<EntrancesList>) mDiscoveryRecommend.getEntrances().getList();
+        mMoreCategoryButton = (DiscoveryBottomButtonView) v.findViewById(R.id.discovery_bottom_more_category_button);
+        mLiveButton = (DiscoveryBottomButtonView) v.findViewById(R.id.discovery_bottom_live_button);
+        mMoreCategoryButton.setOnButtonClickListener(new DiscoveryBottomButtonView.DiscoveryBottomButtonClickListener() {
+            @Override
+            public void onDiscoveryBottomButtonClick() {
+
+            }
+        });
+        mLiveButton.setText(data.get(0).getTitle());
+        mLiveButton.loadImage(getActivity(), data.get(0).getCoverPath());
+        mLiveButton.setOnButtonClickListener(new DiscoveryBottomButtonView.DiscoveryBottomButtonClickListener() {
+            @Override
+            public void onDiscoveryBottomButtonClick() {
+
             }
         });
     }

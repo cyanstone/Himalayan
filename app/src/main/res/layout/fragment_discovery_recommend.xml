@@ -134,9 +134,25 @@
                 android:id="@+id/discovery_recommend_view14"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/discovery_recommend_height"
+                android:layout_marginTop="@dimen/recommend_view_margin_top">
+            </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
+
+            <com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView
+                android:id="@+id/discovery_bottom_more_category_button"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/recommend_view_margin_top"
+                app:discovery_bottom_button_imageSrc="@mipmap/category_more"
+                app:discovery_bottom_button_text="@string/discovery_button_button_category_more_text"
+                android:layout_height="48dp">
+            </com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView>
+
+            <com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView
+                android:id="@+id/discovery_bottom_live_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_marginTop="@dimen/recommend_view_margin_top"
                 android:layout_marginBottom="64dp">
-            </com.my.cyanstone.himalayan.ui.view.DiscoveryRecommendView>
+            </com.my.cyanstone.himalayan.ui.view.DiscoveryBottomButtonView>
 
         </LinearLayout>
     </ScrollView>

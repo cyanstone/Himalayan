@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/view_discovery_bottom_button_layout"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/special_colums_background"
+              android:padding="2dp">
+    <ImageView
+        android:padding="6dp"
+        android:id="@+id/view_discovery_bottom_button_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_weight="2"/>
+
+    <View
+        android:layout_margin="6dp"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divide_line"/>
+
+    <TextView
+        android:id="@+id/view_discovery_bottom_button_text"
+        android:layout_margin="4dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="10"
+        android:textColor="@color/nav_text_unChecked"/>
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_weight="1"
+        android:layout_margin="4dp"
+        android:src="@mipmap/ic_more"/>
+
+</LinearLayout>

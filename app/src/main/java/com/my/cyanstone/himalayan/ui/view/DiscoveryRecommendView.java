@@ -63,6 +63,13 @@ public class DiscoveryRecommendView extends LinearLayout {
         mTitleView.setText(mTitleText);
         mTitleView.setTextSize(mTitleSize);
         mMoreView.setTextSize(mTitleSize);
+
+        mMoreClickListener = new MoreClickListener() {
+            @Override
+            public void moreClick() {
+
+            }
+        };
         mMoreView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

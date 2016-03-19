@@ -18,4 +18,5 @@
     <string name="download_nav_downloading_text">下载中</string>
     <string name="text_more">更多</string>
     <string name="specialColumn">精品听单</string>
+    <string name="discovery_button_button_category_more_text">查看更多分类</string>
 </resources>

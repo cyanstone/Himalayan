@@ -17,7 +17,6 @@ import com.my.cyanstone.himalayan.R;
 public class SpecialColumsView extends LinearLayout {
 
     private String mTitleText;
-    private int mTitleColor;
     private float mTitleSize;
 
     private TextView mTitleView,mMoreView;
@@ -32,7 +31,7 @@ public class SpecialColumsView extends LinearLayout {
     public SpecialColumsView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SpecialColumsView);
-        mTitleSize = ta.getDimension(R.styleable.SpecialColumsView_specialColumsTitleSize,12);
+        mTitleSize = ta.getDimension(R.styleable.SpecialColumsView_specialColumsTitleSize, 12);
         mTitleText = ta.getString(R.styleable.SpecialColumsView_specialColumsTitleText);
         ta.recycle();
         LayoutInflater.from(context).inflate(R.layout.view_special_column, this);
@@ -46,6 +45,12 @@ public class SpecialColumsView extends LinearLayout {
 
         mTitleView.setText(mTitleText);
 
+        moreClickListener = new SpecialColumsMoreClickListener() {
+            @Override
+            public void onMoreClick() {
+
+            }
+        };
         mMoreView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

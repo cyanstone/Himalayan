@@ -85,6 +85,13 @@ public class AlbumInfoListItemView extends LinearLayout {
 
         mLine.setVisibility(mLineGone ? View.GONE : View.VISIBLE);
 
+        mListener = new AlbumInfoListItemClickListener() {
+            @Override
+            public void onItemClick() {
+
+            }
+        };
+
         mLayout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

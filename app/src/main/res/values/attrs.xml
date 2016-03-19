@@ -39,4 +39,10 @@
         <attr name="specialColumsTitleColor" format="color"/>
         <attr name="specialColumsTitleSize" format="dimension"/>
     </declare-styleable>
+    
+    <declare-styleable name="DiscoveryBottomButtonView">
+        <attr name="discovery_bottom_button_text" format="string"/>
+        <attr name="discovery_bottom_button_textSize" format="dimension"/>
+        <attr name="discovery_bottom_button_imageSrc" format="reference"/>
+    </declare-styleable>
 </resources>
