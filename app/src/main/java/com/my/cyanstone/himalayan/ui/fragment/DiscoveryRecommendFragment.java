@@ -45,6 +45,9 @@ import okhttp3.Response;
  * Created by 95199 on 2016/1/17.
  */
 public class DiscoveryRecommendFragment extends Fragment {
+
+    public static final String EXTRA_RECOMMEND_ITEM_DATA = "recommend data";
+    public static final String EXTRA_RECOMMEND_TITLE = "recommend title";
     private final static String TAG = "DiscoveryRecommendFragment";
     private final static String  recommendUrl =
             API.DISCOVERY_RECOMMEND;
@@ -116,7 +119,6 @@ public class DiscoveryRecommendFragment extends Fragment {
                             initHotRecommends(v);
                             initBottomButton(v);
                         }
-
                     });
                 }
             }
@@ -201,7 +203,8 @@ public class DiscoveryRecommendFragment extends Fragment {
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data",list.get(0));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA,list.get(0));
+                bundle.putString(EXTRA_RECOMMEND_TITLE, mDiscoveryRecommend.getEditorRecommendAlbums().getTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
@@ -214,9 +217,9 @@ public class DiscoveryRecommendFragment extends Fragment {
             @Override
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
-                startActivity(intent);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data",list.get(1));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA, list.get(1));
+                bundle.putString(EXTRA_RECOMMEND_TITLE,mDiscoveryRecommend.getEditorRecommendAlbums().getTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
@@ -230,7 +233,8 @@ public class DiscoveryRecommendFragment extends Fragment {
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data", list.get(2));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA, list.get(2));
+                bundle.putString(EXTRA_RECOMMEND_TITLE,mDiscoveryRecommend.getEditorRecommendAlbums().getTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
@@ -254,7 +258,8 @@ public class DiscoveryRecommendFragment extends Fragment {
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data", item.getList().get(0));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA, item.getList().get(0));
+                bundle.putString(EXTRA_RECOMMEND_TITLE,item.getTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
@@ -268,7 +273,8 @@ public class DiscoveryRecommendFragment extends Fragment {
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data",item.getList().get(1));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA,item.getList().get(1));
+                bundle.putString(EXTRA_RECOMMEND_TITLE, item.getTitle());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
@@ -280,10 +286,11 @@ public class DiscoveryRecommendFragment extends Fragment {
             @Override
             public void myOnClick() {
                 Intent intent = new Intent(getActivity(), AlbumDetailPageActivity.class);
-                startActivity(intent);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable("data",item.getList().get(2));
+                bundle.putParcelable(EXTRA_RECOMMEND_ITEM_DATA,item.getList().get(2));
+                bundle.putString(EXTRA_RECOMMEND_TITLE,item.getTitle());
                 intent.putExtras(bundle);
+                startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.in_from_right,R.anim.out_from_right);
             }
         });

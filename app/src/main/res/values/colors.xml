@@ -13,4 +13,5 @@
     <color name="tag_text">#151414</color>
     <color name="subtitle_text">#525d64</color>
     <color name="black_text">#000000</color>
+    <color name="activity_background">#fffefe</color>
 </resources>
